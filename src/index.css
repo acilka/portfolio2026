@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* ========================================
+   THEME — Tailwind v4 custom tokens
+   ======================================== */
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  /* Brand colors */
+  --color-brand-accent: #f97316;
+  --color-brand-dark: #080505;
+  --color-brand-surface: #121212;
+
+  /* Custom animations */
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-bounce-subtle: bounce-subtle 2s infinite;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounce-subtle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+/* ========================================
+   DARK MODE — class strategy
+   ======================================== */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fafafa;
+    color: #171717;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    background-color: #080505;
+    color: #ffffff;
+    background-image: radial-gradient(
+        circle at 0% 0%,
+        rgba(74, 18, 24, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 100% 50%,
+        rgba(20, 5, 8, 0.3) 0%,
+        transparent 50%
+      );
+    background-attachment: fixed;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #333;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+/* ========================================
+   COMPONENT STYLES
+   ======================================== */
+@layer components {
+  .glass-nav {
+    background: #fafafa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .glass-nav {
+    background: #080505;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ========================================
+   STAGGER DELAYS
+   ======================================== */
+.stagger-1 {
+  animation-delay: 100ms;
+}
+.stagger-2 {
+  animation-delay: 200ms;
+}
+.stagger-3 {
+  animation-delay: 300ms;
+}
+.stagger-4 {
+  animation-delay: 400ms;
+}
