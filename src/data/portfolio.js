@@ -134,7 +134,7 @@ improvements: [
       "Gestion de modale avec upload de fichier et preview",
       "Système de filtrage dynamique par catégorie",
     ],
-    github: "https://github.com/acilka/Projet-6-Sophie-Bluel",
+    github: "https://github.com/acilka/Project6final",
     live: "#",
   },
 ];
