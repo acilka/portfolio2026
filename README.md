@@ -25,4 +25,4 @@ npm run dev
 
 ## Déploiement
 
-Déployé sur Vercel : [ton-url.vercel.app](https://ton-url.vercel.app)
+Déployé sur Vercel : https://portfolio2026-mu-sandy.vercel.app/
