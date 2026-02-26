@@ -36,7 +36,6 @@ export default function ProjectDetail() {
         </p>
       </header>
 
-      {/* Images du projet */}
       <div className="flex flex-col gap-4 mb-12">
         <div className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-white/10">
           <img
@@ -45,8 +44,8 @@ export default function ProjectDetail() {
             className="w-full h-auto object-contain"
           />
         </div>
-
-        {project.screenshots && project.screenshots.length > 0 &&
+        {project.screenshots &&
+          project.screenshots.length > 0 &&
           project.screenshots.map((screenshot, index) => (
             <div
               key={index}
@@ -59,24 +58,22 @@ export default function ProjectDetail() {
                 loading="lazy"
               />
             </div>
-          ))
-        }
+          ))}
       </div>
 
-      {/* Contenu */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
         <div className="lg:col-span-2">
           <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-            À propos du projet
+            A propos du projet
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
             {project.fullDescription}
           </p>
 
           {project.challenges && (
-            <>
+            <div className="mb-8">
               <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                Défis techniques
+                Defis techniques
               </h2>
               <ul className="space-y-3">
                 {project.challenges.map((challenge, i) => (
@@ -88,14 +85,32 @@ export default function ProjectDetail() {
                   </li>
                 ))}
               </ul>
-            </>
+            </div>
+          )}
+
+          {project.improvements && (
+            <div>
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
+                Perspectives d amelioration
+              </h2>
+              <ul className="space-y-3">
+                {project.improvements.map((improvement, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-neutral-300 dark:bg-neutral-600 shrink-0" />
+                    <span className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                      {improvement}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
         </div>
 
         <aside className="lg:col-span-1">
           <div className="sticky top-24 space-y-6">
             <div className="p-5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-100 dark:border-white/5">
-              <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-3">
+              <p className="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-3">
                 Technologies
               </p>
               <div className="flex flex-wrap gap-2">
@@ -150,8 +165,8 @@ export default function ProjectDetail() {
               className="group-hover:-translate-x-1 transition-transform"
             />
             <div>
-              <p className="text-[10px] uppercase tracking-widest text-neutral-400">
-                Précédent
+              <p className="text-[10px] uppercase tracking-widest text-neutral-500">
+                Precedent
               </p>
               <p className="text-sm font-medium">{prevProject.title}</p>
             </div>
@@ -166,7 +181,7 @@ export default function ProjectDetail() {
             className="group flex items-center gap-3 text-right text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
           >
             <div>
-              <p className="text-[10px] uppercase tracking-widest text-neutral-400">
+              <p className="text-[10px] uppercase tracking-widest text-neutral-500">
                 Suivant
               </p>
               <p className="text-sm font-medium">{nextProject.title}</p>

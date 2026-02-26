@@ -73,7 +73,7 @@ export default function Contact() {
           </a>
 
           <div className="md:hidden mt-6">
-            <p className="text-[10px] text-neutral-400 uppercase tracking-widest">
+            <p className="text-[10px] text-neutral-500 uppercase tracking-widest">
               Localisation
             </p>
             <p className="text-neutral-900 dark:text-white font-medium mt-1">

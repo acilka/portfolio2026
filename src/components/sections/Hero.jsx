@@ -72,7 +72,7 @@ export default function Hero() {
 
           <div className="animate-fade-in opacity-0 stagger-4 w-full space-y-8">
             <div>
-              <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-5">
+              <p className="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-5">
                 Stack Technique
               </p>
               <div className="flex flex-wrap gap-x-8 gap-y-5">
@@ -88,7 +88,7 @@ export default function Hero() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-5">
+              <p className="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-5">
                 Outils
               </p>
               <div className="flex flex-wrap gap-x-8 gap-y-5">
@@ -104,7 +104,7 @@ export default function Hero() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-5">
+              <p className="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-5">
                 Créatif
               </p>
               <div className="flex flex-wrap gap-x-8 gap-y-5">

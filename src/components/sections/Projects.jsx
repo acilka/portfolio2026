@@ -30,15 +30,6 @@ export default function Projects() {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-
-        <div className="mt-8 text-center md:hidden">
-          <a
-            href="https://github.com"
-            className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-all border rounded-full text-neutral-900 dark:text-white border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/5"
-          >
-            Voir le portfolio complet
-          </a>
-        </div>
       </div>
     </section>
   );
