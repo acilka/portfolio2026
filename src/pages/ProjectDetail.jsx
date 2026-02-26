@@ -8,14 +8,12 @@ export default function ProjectDetail() {
 
   if (!project) return <Navigate to="/" replace />;
 
-  // Trouver projet suivant et précédent
   const currentIndex = projects.findIndex((p) => p.id === id);
   const prevProject = projects[currentIndex - 1] || null;
   const nextProject = projects[currentIndex + 1] || null;
 
   return (
     <article className="max-w-4xl mx-auto px-6 pt-8 pb-20">
-      {/* Breadcrumb */}
       <Link
         to="/"
         className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors mb-8"
@@ -24,7 +22,6 @@ export default function ProjectDetail() {
         Retour aux projets
       </Link>
 
-      {/* Header */}
       <header className="mb-10">
         <div className="flex items-center gap-3 mb-4">
           <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider bg-neutral-100 dark:bg-white/10 text-neutral-600 dark:text-neutral-300 rounded-full">
@@ -39,37 +36,35 @@ export default function ProjectDetail() {
         </p>
       </header>
 
-      {/* Image principale */}
-      <div className="aspect-video overflow-hidden rounded-2xl mb-4 border border-neutral-200 dark:border-white/10">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
+      {/* Images du projet */}
+      <div className="flex flex-col gap-4 mb-12">
+        <div className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-white/10">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-auto object-contain"
+          />
+        </div>
 
-      {/* Screenshots supplémentaires */}
-      {project.screenshots && project.screenshots.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {project.screenshots.map((screenshot, index) => (
+        {project.screenshots && project.screenshots.length > 0 &&
+          project.screenshots.map((screenshot, index) => (
             <div
               key={index}
-              className="aspect-video overflow-hidden rounded-2xl border border-neutral-200 dark:border-white/10"
+              className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-white/10"
             >
               <img
                 src={screenshot}
                 alt={`${project.title} - capture ${index + 2}`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
                 loading="lazy"
               />
             </div>
-          ))}
-        </div>
-      )}
+          ))
+        }
+      </div>
 
       {/* Contenu */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
-        {/* Description complète */}
         <div className="lg:col-span-2">
           <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
             À propos du projet
@@ -78,7 +73,6 @@ export default function ProjectDetail() {
             {project.fullDescription}
           </p>
 
-          {/* Défis techniques */}
           {project.challenges && (
             <>
               <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
@@ -98,10 +92,8 @@ export default function ProjectDetail() {
           )}
         </div>
 
-        {/* Sidebar */}
         <aside className="lg:col-span-1">
           <div className="sticky top-24 space-y-6">
-            {/* Stack */}
             <div className="p-5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-100 dark:border-white/5">
               <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-3">
                 Technologies
@@ -118,7 +110,6 @@ export default function ProjectDetail() {
               </div>
             </div>
 
-            {/* Liens */}
             <div className="flex flex-col gap-3">
               {project.github && project.github !== "#" && (
                 <a
@@ -147,7 +138,6 @@ export default function ProjectDetail() {
         </aside>
       </div>
 
-      {/* Navigation entre projets */}
       <nav className="flex items-center justify-between pt-8 border-t border-neutral-200 dark:border-white/5">
         {prevProject ? (
           <Link

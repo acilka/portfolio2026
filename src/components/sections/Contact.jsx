@@ -32,7 +32,6 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col gap-4 justify-center">
-          {/* Email */}
           <a
             href={`mailto:${personalInfo.email}`}
             className="group flex items-center justify-between p-5 rounded border border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/30 bg-white dark:bg-white/5 transition-all"
@@ -52,7 +51,6 @@ export default function Contact() {
             />
           </a>
 
-          {/* LinkedIn */}
           <a
             href={personalInfo.linkedin}
             target="_blank"
@@ -74,7 +72,6 @@ export default function Contact() {
             />
           </a>
 
-          {/* Localisation mobile */}
           <div className="md:hidden mt-6">
             <p className="text-[10px] text-neutral-400 uppercase tracking-widest">
               Localisation

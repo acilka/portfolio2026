@@ -7,7 +7,6 @@ export default function Projects() {
       className="lg:py-20 overflow-hidden pt-16 px-6 pb-16 relative"
       id="projets"
     >
-      {/* Decorative background blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -26,14 +25,12 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {/* Mobile CTA */}
         <div className="mt-8 text-center md:hidden">
           <a
             href="https://github.com"

@@ -3,19 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Acil — Développeur Front-End & Designer. Interfaces React performantes et esthétiques." />
-    <title>Acil — Développeur Front-End & Designer</title>
 
-    <!-- Google Fonts: Inter -->
+    <!-- SEO -->
+    <title>Acil Kadri — Développeur Front-End | Lyon</title>
+    <meta name="description" content="Portfolio d'Acil Kadri, développeur Front-End spécialisé React basé à Lyon. Interfaces rapides, soignées et accessibles." />
+    <meta name="author" content="Acil Kadri" />
+
+    <!-- Open Graph (partage réseaux sociaux) -->
+    <meta property="og:title" content="Acil Kadri — Développeur Front-End" />
+    <meta property="og:description" content="Développeur Front-End spécialisé React. Interfaces rapides, soignées et accessibles." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Google Fonts: Inter — chargement non-bloquant -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://api.iconify.design" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
 
-    <!-- Inline dark mode script to prevent flash -->
+    <!-- Dark mode anti-flash -->
     <script>
       (function () {
-        const theme = localStorage.getItem("theme");
-        if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
           document.documentElement.classList.add("dark");
         }
       })();

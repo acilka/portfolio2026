@@ -12,7 +12,7 @@ export const personalInfo = {
   github: "https://github.com",
   twitter: "https://twitter.com",
   photo:
-    "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/8ce5a370-50f4-41c0-9710-2207925a1035_800w.png",
+    "/images/photo-acil.webp",
 };
 
 export const techStack = [

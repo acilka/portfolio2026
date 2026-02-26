@@ -11,16 +11,13 @@ export default function Navbar({ isDark, toggleTheme }) {
   return (
     <nav className="fixed z-50 glass-nav transition-all duration-300 top-0 right-0 left-0">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <span className="text-xl font-semibold text-neutral-900 dark:text-white tracking-tight">
             Acil.
           </span>
         </Link>
 
-        {/* Menu Right */}
         <div className="flex items-center gap-6">
-          {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-6 mr-4">
             {navLinks.map((link) =>
               isHome ? (
@@ -43,7 +40,6 @@ export default function Navbar({ isDark, toggleTheme }) {
             )}
           </div>
 
-          {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors text-neutral-600 dark:text-neutral-400"
@@ -55,7 +51,6 @@ export default function Navbar({ isDark, toggleTheme }) {
             />
           </button>
 
-          {/* Mobile menu button */}
           <button
             className="md:hidden text-neutral-900 dark:text-white"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -73,7 +68,6 @@ export default function Navbar({ isDark, toggleTheme }) {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden glass-nav border-t border-neutral-200 dark:border-white/5 px-6 pb-4">
           {navLinks.map((link) =>

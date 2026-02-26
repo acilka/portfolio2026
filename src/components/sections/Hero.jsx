@@ -6,7 +6,6 @@ export default function Hero() {
   return (
     <section className="min-h-[60vh] flex flex-col max-w-7xl mx-auto px-6 justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        {/* Content Left */}
         <div className="lg:col-span-7 flex flex-col items-start text-left z-10 order-2 lg:order-1">
           <h1 className="md:text-6xl lg:text-7xl dark:text-white leading-[0.9] animate-fade-in stagger-1 text-5xl font-bold text-neutral-900 tracking-tighter opacity-0 mb-4">
             {personalInfo.name} <br />
@@ -19,7 +18,6 @@ export default function Hero() {
             {personalInfo.description}
           </p>
 
-          {/* Liens contact rapides */}
           <div className="flex items-center gap-4 mb-8 animate-fade-in opacity-0 stagger-2">
             <a
               href={`mailto:${personalInfo.email}`}
@@ -52,7 +50,6 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4 animate-fade-in opacity-0 stagger-3 mb-12">
             <a
               href="#projets"
@@ -73,9 +70,7 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Stack, Outils & Créatif — taille augmentée */}
           <div className="animate-fade-in opacity-0 stagger-4 w-full space-y-8">
-            {/* Stack Technique */}
             <div>
               <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-5">
                 Stack Technique
@@ -92,7 +87,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Outils */}
             <div>
               <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-5">
                 Outils
@@ -109,7 +103,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Créatif */}
             <div>
               <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-5">
                 Créatif
@@ -128,13 +121,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Photo Right — sans bulle */}
         <div className="lg:col-span-5 order-1 lg:order-2 flex lg:justify-end animate-fade-in stagger-2 opacity-0 relative justify-center">
           <div className="group relative">
             <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-neutral-800">
               <img
                 src={personalInfo.photo}
                 alt={personalInfo.name}
+                width={288}
+                height={288}
+                fetchPriority="high"
                 className="group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 cursor-pointer w-full h-full object-cover grayscale scale-105"
               />
               <div className="group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/20 to-transparent opacity-0 absolute inset-0" />

@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
-/* ========================================
-   THEME — Tailwind v4 custom tokens
-   ======================================== */
 @theme {
   --font-sans: "Inter", sans-serif;
 
-  /* Brand colors */
   --color-brand-accent: #f97316;
   --color-brand-dark: #080505;
   --color-brand-surface: #121212;
 
-  /* Custom animations */
   --animate-fade-in: fade-in 0.5s ease-out forwards;
   --animate-float: float 6s ease-in-out infinite;
   --animate-bounce-subtle: bounce-subtle 2s infinite;
@@ -48,14 +43,8 @@
   }
 }
 
-/* ========================================
-   DARK MODE — class strategy
-   ======================================== */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ========================================
-   BASE STYLES
-   ======================================== */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -86,7 +75,6 @@
     background-attachment: fixed;
   }
 
-  /* Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -105,9 +93,6 @@
   }
 }
 
-/* ========================================
-   COMPONENT STYLES
-   ======================================== */
 @layer components {
   .glass-nav {
     background: #fafafa;
@@ -120,9 +105,6 @@
   }
 }
 
-/* ========================================
-   STAGGER DELAYS
-   ======================================== */
 .stagger-1 {
   animation-delay: 100ms;
 }

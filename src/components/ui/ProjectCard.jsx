@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 export default function ProjectCard({ project }) {
   return (
     <article className="group relative flex flex-col h-full rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/5 hover:border-neutral-300 dark:hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg">
-      {/* Image */}
       <div className="aspect-[16/10] overflow-hidden rounded-t-2xl relative border-b border-neutral-100 dark:border-white/5">
         <div className="absolute inset-0 bg-neutral-900/5 group-hover:bg-transparent transition-colors z-10" />
         <img
           src={project.image}
           alt={project.title}
+          width={800}
+          height={500}
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
@@ -20,7 +22,6 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
 
-      {/* Contenu */}
       <div className="flex flex-col flex-grow p-5">
         <div className="flex items-start justify-between mb-2">
           <h3 className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-brand-accent transition-colors">
