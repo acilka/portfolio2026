@@ -8,7 +8,7 @@ export const personalInfo = {
   location: "Lyon, France",
   availability: "Disponible pour des missions freelance ou CDI.",
   email: "acil.kadri1@gmail.com",
-  linkedin: "www.linkedin.com/in/acil-kadri-97197b296",
+  linkedin: "https://www.linkedin.com/in/acil-kadri-97197b296/",
   github: "https://github.com/acilka",
   photo:
     "/images/photo-acil.webp",
