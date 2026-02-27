@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 
 const Home = lazy(() => import("./pages/Home"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 export default function App() {
   const { isDark, toggle } = useDarkMode();
@@ -27,6 +28,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projet/:id" element={<ProjectDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
         <Footer />

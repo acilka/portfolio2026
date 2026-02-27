@@ -58,7 +58,6 @@ export const projects = [
   {
     id: "argentbank",
     title: "ArgentBank",
-    category: "Fintech",
     description:
       "Application bancaire complète avec authentification JWT, gestion d'état global Redux et édition de profil en temps réel via API REST.",
 fullDescription:
@@ -85,7 +84,6 @@ improvements: [
   {
     id: "kasa",
     title: "Kasa",
-    category: "Immobilier",
     description:
       "Plateforme de location immobilière avec routing dynamique, composants collapse animés et galerie d'images interactive.",
     fullDescription:
@@ -112,7 +110,6 @@ improvements: [
   {
     id: "sophie-bluel",
     title: "Sophie Bluel",
-    category: "Architecture",
     description:
       "Portfolio d'architecte avec back-office d'administration complet : ajout, suppression et filtrage de projets via manipulation DOM et API.",
     fullDescription:

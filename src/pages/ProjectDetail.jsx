@@ -64,7 +64,7 @@ export default function ProjectDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
         <div className="lg:col-span-2">
           <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-            A propos du projet
+            À propos du projet
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
             {project.fullDescription}
@@ -73,7 +73,7 @@ export default function ProjectDetail() {
           {project.challenges && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                Defis techniques
+                Défis techniques
               </h2>
               <ul className="space-y-3">
                 {project.challenges.map((challenge, i) => (
@@ -91,7 +91,7 @@ export default function ProjectDetail() {
           {project.improvements && (
             <div>
               <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-                Perspectives d amelioration
+                Perspectives d'amélioration
               </h2>
               <ul className="space-y-3">
                 {project.improvements.map((improvement, i) => (
@@ -166,7 +166,7 @@ export default function ProjectDetail() {
             />
             <div>
               <p className="text-[10px] uppercase tracking-widest text-neutral-500">
-                Precedent
+                Précédent
               </p>
               <p className="text-sm font-medium">{prevProject.title}</p>
             </div>

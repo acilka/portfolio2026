@@ -15,11 +15,6 @@ export default function ProjectCard({ project }) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
-        <div className="absolute top-3 right-3 z-20">
-          <span className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-white/90 dark:bg-black/90 backdrop-blur-md text-neutral-900 dark:text-white rounded-full border border-neutral-200 dark:border-white/10">
-            {project.category}
-          </span>
-        </div>
       </div>
 
       <div className="flex flex-col flex-grow p-5">
