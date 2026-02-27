@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio2026-mu-sandy.vercel.app/
+Sitemap: https://acilkadri.com/
